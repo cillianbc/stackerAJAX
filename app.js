@@ -51,7 +51,7 @@ var showQuestion = function(question) {
 var showInspired = function(question) {
 
 	// clone our result template code
-	var result = $('.templates .question').clone();
+	var result = $('.templates .inspired').clone();
 
 	// Set the question properties in result
 	var questionElem = result.find('.question-text a');
@@ -59,8 +59,8 @@ var showInspired = function(question) {
 	questionElem.text(question.title);
 
   // set some properties related to asker
-	var asker = result.find('.asker');
-	asker.html('<p>Name: <a target="_blank" href=http://stackoverflow.com/users/' + question.user.user_id + ' >' +
+	var inspired = result.find('.answerer');
+	inspired.html('<p>Name: <a target="_blank" href=http://stackoverflow.com/users/' + question.user.user_id + ' >' +
 													question.user.display_name +
 												'</a>' +
 							'</p>' +
